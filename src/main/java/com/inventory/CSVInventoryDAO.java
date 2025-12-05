@@ -14,20 +14,18 @@ public class CSVInventoryDAO implements InventoryDAO {
 
     private static final String CSV_FILE = "inventory.csv";
 
-    // 1. Load all products from the CSV file into a List
     @Override
     public List<ClothingItem> getAllProducts() {
         List<ClothingItem> products = new ArrayList<>();
         File file = new File(CSV_FILE);
 
-        // If file doesn't exist, return empty list (no error)
         if (!file.exists()) {
             return products;
         }
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
-            boolean isFirstLine = true; // To skip the header
+            boolean isFirstLine = true; 
 
             while ((line = br.readLine()) != null) {
                 if (isFirstLine) {
@@ -36,7 +34,6 @@ public class CSVInventoryDAO implements InventoryDAO {
                 }
 
                 String[] data = line.split(",");
-                // Ensure the line has all 7 expected columns
                 if (data.length == 6) {
                     int id = Integer.parseInt(data[0]);
                     String name = data[1];
@@ -55,15 +52,13 @@ public class CSVInventoryDAO implements InventoryDAO {
         return products;
     }
 
-    // 2. Add a single product
     @Override
     public void addProduct(ClothingItem item) {
         List<ClothingItem> currentList = getAllProducts();
         currentList.add(item);
-        saveToFile(currentList); // Save the entire updated list
+        saveToFile(currentList); 
     }
 
-    // 3. Get a single product by ID
     @Override
     public ClothingItem getProduct(int id) {
         List<ClothingItem> products = getAllProducts();
@@ -72,20 +67,19 @@ public class CSVInventoryDAO implements InventoryDAO {
                 return item;
             }
         }
-        return null; // Not found
+        return null;
     }
 
-    // 4. Update an existing product
     @Override
     public void updateProduct(ClothingItem updatedItem) {
         List<ClothingItem> products = getAllProducts();
         for (int i = 0; i < products.size(); i++) {
             if (products.get(i).getID() == updatedItem.getID()) {
-                products.set(i, updatedItem); // Replace the old item
+                products.set(i, updatedItem); 
                 break;
             }
         }
-        saveToFile(products); // Rewrite the file
+        saveToFile(products); 
     }
 
     @Override

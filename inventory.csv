@@ -1,3 +1,22 @@
 ID,Name,Price,Quantity,Size,Material,Color
-1,Summer T-Shirt,15.99,49,M,Red
-1,Summer T-Shirt,19.99,50,M,Red
+1,Classic White Tee,15.99,100,M,White
+2,Classic White Tee,15.99,50,L,White
+3,Blue Denim Jeans,49.99,30,32,Blue
+4,Blue Denim Jeans,49.99,25,34,Blue
+5,Black Leather Jacket,120.00,10,L,Black
+6,Red Hoodie,35.50,40,M,Red
+7,Red Hoodie,35.50,20,XL,Red
+8,Summer Floral Dress,29.99,15,S,Pink
+9,Winter Wool Scarf,12.50,60,OneSize,Grey
+10,Running Sneakers,59.99,25,10,Green
+11,Striped Polo Shirt,22.00,35,L,Blue/White
+12,Cargo Shorts,25.00,45,34,Khaki
+13,Baseball Cap,18.00,50,Adj,Navy
+14,Yoga Leggings,28.00,30,M,Black
+15,Formal Button Up,35.00,20,L,White
+16,Graphic T-Shirt,19.99,40,M,Black
+17,Puffer Vest,45.00,12,XL,Orange
+18,Ankle Socks (3-Pack),9.99,100,OneSize,White
+19,Beanie Hat,14.50,45,OneSize,Yellow
+20,Silk Tie,25.00,15,OneSize,Red
+21,Designer Jacket,299.99,35,L,Black
