@@ -1,0 +1,6 @@
+com\inventory\CSVInventoryDAO.class
+com\inventory\ConsoleTest.class
+com\inventory\InventoryDAO.class
+com\inventory\Role.class
+com\inventory\App.class
+com\inventory\ClothingItem.class
